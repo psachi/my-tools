@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .tool-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        button {
+            padding: 8px 16px;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0052cc;
+        }
+        input {
+            padding: 8px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Tools Collection</h1>
+    
+    <div class="tool-box">
+        <h2>Text Transformer</h2>
+        <input type="text" id="textInput" placeholder="Enter some text">
+        <button onclick="transformText()">Transform</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function transformText() {
+            const input = document.getElementById('textInput').value;
+            const transformed = input.toUpperCase(); // Simple transformation
+            document.getElementById('result').textContent = transformed;
+        }
+    </script>
+</body>
+</html>
